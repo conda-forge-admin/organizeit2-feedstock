@@ -11,9 +11,12 @@ source:
   sha256: e32c835fa68bb5d813e5d9e935e0e185a9b3de8ccc7ddfb6e326eb2a018986d8
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: python -m pip install . -vv --no-deps --no-build-isolation
+  python:
+    entry_points:
+      - organizeit = organizeit2.cli:main
 
 requirements:
   host:
